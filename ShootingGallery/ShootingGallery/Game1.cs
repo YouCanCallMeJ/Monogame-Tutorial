@@ -9,6 +9,10 @@ namespace ShootingGallery
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
+        Texture2D targetSprite;
+        Texture2D crosshairsSprite;
+        Texture2D backgroundSprite;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -27,7 +31,10 @@ namespace ShootingGallery
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            // Assign Imported assets(.xnb files = stream target) to targetSprite
+            targetSprite = Content.Load<Texture2D>("target");
+            crosshairsSprite = Content.Load<Texture2D>("crosshairs");
+            backgroundSprite = Content.Load<Texture2D>("sky");
         }
 
         protected override void Update(GameTime gameTime)
@@ -44,7 +51,11 @@ namespace ShootingGallery
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            // We are about to draw something
+            _spriteBatch.Begin();
+            // Set 
+            _spriteBatch.Draw(targetSprite, new Vector2(0,0), Color.White);
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
