@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/01. 개인/03. 학습/04. Programming/Monogame/Monogame-Tutorial/ShootingGallery/ShootingGallery/Content/crosshairs.png</File>
+    <File>D:/01. 개인/03. 학습/04. Programming/Monogame/Monogame-Tutorial/ShootingGallery/ShootingGallery/Content/galleryFont.spritefont</File>
+    <File>D:/01. 개인/03. 학습/04. Programming/Monogame/Monogame-Tutorial/ShootingGallery/ShootingGallery/Content/sky.png</File>
+    <File>D:/01. 개인/03. 학습/04. Programming/Monogame/Monogame-Tutorial/ShootingGallery/ShootingGallery/Content/target.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

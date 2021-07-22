@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>D:/01. 개인/03. 학습/04. Programming/Monogame/Monogame-Tutorial/ShootingGallery/ShootingGallery/Content/galleryFont.spritefont</SourceFile>
+  <SourceTime>2017-11-18T14:07:30+09:00</SourceTime>
+  <DestFile>D:/01. 개인/03. 학습/04. Programming/Monogame/Monogame-Tutorial/ShootingGallery/ShootingGallery/Content/bin/DesktopGL/galleryFont.xnb</DestFile>
+  <DestTime>2021-07-22T14:50:29.1022866+09:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2020-08-10T16:17:54+09:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2020-08-10T16:17:54+09:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
