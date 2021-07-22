@@ -12,6 +12,9 @@ namespace ShootingGallery
         Texture2D targetSprite;
         Texture2D crosshairsSprite;
         Texture2D backgroundSprite;
+        
+        // Printing Text Font Sprite
+        SpriteFont gameFont;
 
         public Game1()
         {
@@ -35,6 +38,8 @@ namespace ShootingGallery
             targetSprite = Content.Load<Texture2D>("target");
             crosshairsSprite = Content.Load<Texture2D>("crosshairs");
             backgroundSprite = Content.Load<Texture2D>("sky");
+
+            gameFont = Content.Load<SpriteFont>("galleryFont");
         }
 
         protected override void Update(GameTime gameTime)
@@ -56,7 +61,10 @@ namespace ShootingGallery
             // Set 
             // Object Order is related to the coding sequence
             _spriteBatch.Draw(backgroundSprite, new Vector2(0, 0), Color.White);
-            
+
+            // Printing Text
+            _spriteBatch.DrawString(gameFont, "Test Message", new Vector2(100, 100), Color.White);
+
             _spriteBatch.End();
 
             base.Draw(gameTime);
