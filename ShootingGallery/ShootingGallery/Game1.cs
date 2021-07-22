@@ -54,7 +54,9 @@ namespace ShootingGallery
             // We are about to draw something
             _spriteBatch.Begin();
             // Set 
-            _spriteBatch.Draw(targetSprite, new Vector2(0,0), Color.White);
+            // Object Order is related to the coding sequence
+            _spriteBatch.Draw(backgroundSprite, new Vector2(0, 0), Color.White);
+            
             _spriteBatch.End();
 
             base.Draw(gameTime);
