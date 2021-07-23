@@ -16,6 +16,10 @@ namespace ShootingGallery
         // Printing Text Font Sprite
         SpriteFont gameFont;
 
+        // Variables
+        Vector2 targetPosition = new Vector2(300, 300);
+        const int targetRadius = 45;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -64,6 +68,9 @@ namespace ShootingGallery
 
             // Printing Text
             _spriteBatch.DrawString(gameFont, "Test Message", new Vector2(100, 100), Color.White);
+
+            // targetPosition can be changed using update method
+            _spriteBatch.Draw(targetSprite, targetPosition, Color.White);
 
             _spriteBatch.End();
 
