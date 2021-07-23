@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -67,8 +68,13 @@ namespace ShootingGallery
                 if (mouseTargetDistance < targetRadius)
                 {
                     score++;
-                }
 
+                    // Change target Position randomly
+                    // Range is exclusive
+                    Random random = new Random();
+                    targetPosition.X = random.Next(0, _graphics.PreferredBackBufferWidth);
+                    targetPosition.Y = random.Next(0, _graphics.PreferredBackBufferHeight);
+                }
                 
                 mRealeased = false;
             }
@@ -77,8 +83,6 @@ namespace ShootingGallery
             {
                 mRealeased = true;
             }
-
-
 
             base.Update(gameTime);
         }
