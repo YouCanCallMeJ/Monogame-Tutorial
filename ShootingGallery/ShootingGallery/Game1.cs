@@ -62,7 +62,14 @@ namespace ShootingGallery
             // Compare Mouse State
             if (mState.LeftButton == ButtonState.Pressed && mRealeased == true)
             {
-                score++;
+                // Calculate the distance between targetPosition point and mouse current point location
+                float mouseTargetDistance = Vector2.Distance(targetPosition, mState.Position.ToVector2());
+                if (mouseTargetDistance < targetRadius)
+                {
+                    score++;
+                }
+
+                
                 mRealeased = false;
             }
 
@@ -70,6 +77,8 @@ namespace ShootingGallery
             {
                 mRealeased = true;
             }
+
+
 
             base.Update(gameTime);
         }
@@ -88,7 +97,8 @@ namespace ShootingGallery
             _spriteBatch.DrawString(gameFont, score.ToString(), new Vector2(100, 100), Color.White);
 
             // targetPosition can be changed using update method
-            _spriteBatch.Draw(targetSprite, targetPosition, Color.White);
+            // Alignment the offset of the target origin
+            _spriteBatch.Draw(targetSprite, new Vector2(targetPosition.X - targetRadius, targetPosition.Y - targetRadius), Color.White);
 
             _spriteBatch.End();
 
