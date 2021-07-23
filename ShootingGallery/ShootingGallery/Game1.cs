@@ -20,6 +20,11 @@ namespace ShootingGallery
         Vector2 targetPosition = new Vector2(300, 300);
         const int targetRadius = 45;
 
+        // Mouse Input
+        MouseState mState;
+        bool mRealeased = true;
+        int score = 0;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -51,7 +56,20 @@ namespace ShootingGallery
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            // Assign Mouse State every frame
+            mState = Mouse.GetState();
+
+            // Compare Mouse State
+            if (mState.LeftButton == ButtonState.Pressed && mRealeased == true)
+            {
+                score++;
+                mRealeased = false;
+            }
+
+            if (mState.LeftButton == ButtonState.Released)
+            {
+                mRealeased = true;
+            }
 
             base.Update(gameTime);
         }
@@ -66,8 +84,8 @@ namespace ShootingGallery
             // Object Order is related to the coding sequence
             _spriteBatch.Draw(backgroundSprite, new Vector2(0, 0), Color.White);
 
-            // Printing Text
-            _spriteBatch.DrawString(gameFont, "Test Message", new Vector2(100, 100), Color.White);
+            // Printing Score
+            _spriteBatch.DrawString(gameFont, score.ToString(), new Vector2(100, 100), Color.White);
 
             // targetPosition can be changed using update method
             _spriteBatch.Draw(targetSprite, targetPosition, Color.White);
